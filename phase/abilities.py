@@ -1,3 +1,5 @@
+
+
 abilities = {
     "Damage": {
         "points": 1,
@@ -24,3 +26,13 @@ abilities = {
         "description": "Luck is important for crit damage."
     }
 }
+
+
+def abilities_assign():
+    while True:
+        print("this is your abilities")
+        for ability, details in abilities.items():
+            print(f"{ability}: {details['points']} points")
+        break
+
+abilities_assign()
