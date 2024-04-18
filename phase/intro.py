@@ -9,14 +9,13 @@ def intro():
 
         if intro_choice not in [0, 1]:
             print("Invalid input")
-            print(game_constants.DIVIDER)
             continue
+        print(game_constants.DIVIDER)
 
         if intro_choice == 0:
             print("Goodbye")
-            print(game_constants.DIVIDER)
-            break
+            return False
         elif intro_choice == 1:
             print("Welcome in world of Arcadius")
-            print(game_constants.DIVIDER)
-            break
+            return True
+        print(game_constants.DIVIDER)
