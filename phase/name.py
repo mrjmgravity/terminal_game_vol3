@@ -1,3 +1,4 @@
+import phase.phase_constants
 from game_constants import DIVIDER
 
 
@@ -19,4 +20,4 @@ def set_nickname():
         elif name_choice == 1:
             print(f"Hello {name_input}")
             print(DIVIDER)
-            break
+            return phase.phase_constants.ABILITIES

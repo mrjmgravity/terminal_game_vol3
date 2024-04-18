@@ -1,4 +1,5 @@
 import game_constants
+import phase.phase_constants
 
 
 def intro():
@@ -14,8 +15,8 @@ def intro():
 
         if intro_choice == 0:
             print("Goodbye")
-            return False
+            return phase.phase_constants.END
         elif intro_choice == 1:
             print("Welcome in world of Arcadius")
-            return True
+            return phase.phase_constants.NAME
         print(game_constants.DIVIDER)
