@@ -2,7 +2,7 @@ import game_constants
 import phase_constants
 
 
-def main_menu(next_phase):
+def menu():
     while True:
         print("0 - Continue to FIGHT")
         print("1 - Edit Hero")
