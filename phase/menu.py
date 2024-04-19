@@ -1,5 +1,6 @@
 import game_constants
-import phase_constants
+from phase import phase_constants
+from phase import abilities
 
 
 def menu():
@@ -17,7 +18,8 @@ def menu():
         if menu_input == 0:
             return phase_constants.FIGHT
         elif menu_input == 1:
-            #TODO editovanie hrdinu
+            abilities.remove_ability()
+            return phase_constants.MENU
             pass
         elif menu_input == 2:
             #TODO ulozenie hry

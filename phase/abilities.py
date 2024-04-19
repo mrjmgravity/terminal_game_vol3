@@ -1,6 +1,6 @@
 from game_constants import DIVIDER
-import hero_data
-import phase_constants
+from phase import hero_data
+from phase import phase_constants
 
 abilities = {
     "Damage": {
@@ -40,7 +40,7 @@ def print_abilities():
 
 def abilities_assign():
     hero_data.available_points = 7
-    while hero_data.available_points > 0:
+    while hero_data.available_points >= 1:
         print(f"You have {hero_data.available_points} points to assign")
         print_abilities()
         assign_input = int(input("What you want upgrade? "))
@@ -64,8 +64,8 @@ def abilities_assign():
             abilities["Luck"]["points"] += 1
         hero_data.available_points -= 1
 
-        print("You have assigned all your points.")
-        print(DIVIDER)
+    print("You have assigned all your points.")
+    print(DIVIDER)
 
 
 def remove_ability():
