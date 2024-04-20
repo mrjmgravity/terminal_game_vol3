@@ -112,3 +112,4 @@ def remove_ability():
             return remove_ability()
         else:
             abilities_assign()
+            return phase.phase_constants.MENU
