@@ -33,9 +33,18 @@ abilities = {
 
 def print_abilities():
     while True:
-        print("This is your abilities: ")
+        print("This is your abilities, if you want to see description type 0 : ")
         for ability, details in abilities.items():
-            print(f"{ability}: {details['points']} points", end=", ")
+            print(f" {ability}: {details['points']} points", end=", ")
+        break
+
+
+def print_ability_description():
+    while True:
+        print("Description of abilities")
+        for ability, details in abilities.items():
+            print(f" {ability}: {details['description']}")
+            print(DIVIDER)
         break
 
 
@@ -46,12 +55,15 @@ def abilities_assign():
         print_abilities()
         assign_input = int(input("What you want upgrade? "))
 
-        if assign_input not in [1, 2, 3, 4, 5, 6]:
+        if assign_input not in [0, 1, 2, 3, 4, 5, 6]:
             print("Invalid input")
             print(DIVIDER)
             continue
 
-        if assign_input == 1:
+        if assign_input == 0:
+            print_ability_description()
+            return abilities_assign()
+        elif assign_input == 1:
             abilities["Damage"]["points"] += 1
         elif assign_input == 2:
             abilities["Defense"]["points"] += 1
