@@ -22,7 +22,7 @@ def menu():
             return phase_constants.MENU
             pass
         elif menu_input == 2:
-            #TODO ulozenie hry
+            # TODO ulozenie hry
             pass
         elif menu_input == 3:
             print("Goodbye")

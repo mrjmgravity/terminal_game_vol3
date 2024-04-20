@@ -2,7 +2,7 @@ from phase.intro import intro
 from phase.name import set_nickname
 from phase import abilities
 from phase import phase_constants
-from phase import menu
+from phase.main_menu import menu
 
 
 current_phase = phase_constants.INTRO
@@ -15,7 +15,7 @@ while True:
     elif current_phase == phase_constants.NAME:
         current_phase = set_nickname()
     elif current_phase == phase_constants.MENU:
-        current_phase = menu
+        current_phase = menu()
     elif current_phase == phase_constants.ABILITIES:
         abilities.abilities_assign()
-        break
+

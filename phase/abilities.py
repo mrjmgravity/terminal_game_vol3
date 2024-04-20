@@ -1,6 +1,7 @@
+import phase.phase_constants
 from game_constants import DIVIDER
 from phase import hero_data
-from phase import phase_constants
+
 
 abilities = {
     "Damage": {
@@ -39,7 +40,7 @@ def print_abilities():
 
 
 def abilities_assign():
-    hero_data.available_points = 7
+    hero_data.available_points = 1
     while hero_data.available_points != 0:
         print(f"You have {hero_data.available_points} points to assign")
         print_abilities()
@@ -64,8 +65,10 @@ def abilities_assign():
             abilities["Luck"]["points"] += 1
         hero_data.available_points -= 1
         print(DIVIDER)
+
     print("You have assigned all your points.")
     print(DIVIDER)
+    return phase.phase_constants.MENU
 
 
 def remove_ability():
@@ -104,7 +107,7 @@ def remove_ability():
             continue
 
         if again_input == "0":
-            return phase_constants.MENU
+            return phase.phase_constants.MENU
         elif again_input == "1":
             return remove_ability()
         else:
