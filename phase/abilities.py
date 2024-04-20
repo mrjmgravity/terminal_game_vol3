@@ -68,7 +68,6 @@ def abilities_assign():
 
     print("You have assigned all your points.")
     print(DIVIDER)
-    return phase.phase_constants.MENU
 
 
 def remove_ability():

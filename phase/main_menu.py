@@ -6,7 +6,7 @@ from phase import abilities
 def menu():
     while True:
         print("0 - Continue to FIGHT")
-        print("1 - Edit Hero")
+        print("1 - Edit points")
         print("2 - Save the game")
         print("3 - Quit the game")
         menu_input = int(input("What is your choice? "))
