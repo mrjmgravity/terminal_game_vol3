@@ -40,7 +40,7 @@ def print_abilities():
 
 def abilities_assign():
     hero_data.available_points = 7
-    while hero_data.available_points >= 1:
+    while hero_data.available_points != 0:
         print(f"You have {hero_data.available_points} points to assign")
         print_abilities()
         assign_input = int(input("What you want upgrade? "))
@@ -63,7 +63,7 @@ def abilities_assign():
         else:
             abilities["Luck"]["points"] += 1
         hero_data.available_points -= 1
-
+        print(DIVIDER)
     print("You have assigned all your points.")
     print(DIVIDER)
 

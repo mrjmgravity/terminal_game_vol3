@@ -18,3 +18,4 @@ while True:
         current_phase = menu
     elif current_phase == phase_constants.ABILITIES:
         abilities.abilities_assign()
+        break
