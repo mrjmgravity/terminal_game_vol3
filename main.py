@@ -17,4 +17,4 @@ while True:
     elif current_phase == phase_constants.MENU:
         current_phase = phase.main_menu.menu()
     elif current_phase == phase_constants.ABILITIES:
-        abilities.abilities_assign()
+        current_phase = phase.abilities.abilities_assign()
