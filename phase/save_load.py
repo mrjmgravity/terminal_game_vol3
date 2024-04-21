@@ -1,5 +1,5 @@
-from phase.name import set_nickname
-from phase import abilities
+from phase.hero_abilities import abilities
+from phase.hero_data import hero_name
 
 
 def save_game(next_phase):
@@ -8,7 +8,7 @@ def save_game(next_phase):
         if save_name.isalpha():
             file_path = "C:/saved_games/" + save_name + ".txt"
             file_handler = open(file_path, "w", encoding="utf-8")
-            file_handler.write(set_nickname().name_input)
+            file_handler.write(hero_name)
             file_handler.write("\n")
 
             for k, v in abilities.abilities():

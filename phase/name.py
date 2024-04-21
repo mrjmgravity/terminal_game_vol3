@@ -4,9 +4,9 @@ from game_constants import DIVIDER
 
 def set_nickname():
     while True:
-        name_input = input("What is your nickname? ")
+        hero_name = input("What is your nickname? ")
         print(DIVIDER)
-        print(f"Is this your nickname? {name_input}")
+        print(f"Is this your nickname? {hero_name}")
         print("0 - Change the nickname\n1 - Confirm the nickname")
         name_choice = int(input("Choose one: "))
 
@@ -19,6 +19,6 @@ def set_nickname():
             print(DIVIDER)
             continue
         elif name_choice == 1:
-            print(f"Hello {name_input}")
+            print(f"Hello {hero_name}")
             print(DIVIDER)
             return phase.phase_constants.ABILITIES
