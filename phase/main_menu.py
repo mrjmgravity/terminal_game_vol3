@@ -1,6 +1,8 @@
 import game_constants
 from phase import phase_constants
 from phase import abilities
+from phase.save_load import save_game
+from phase.phase_constants import MENU
 
 
 def menu():
@@ -16,14 +18,12 @@ def menu():
             continue
 
         if menu_input == 0:
-            return phase_constants.FIGHT
+            continue
         elif menu_input == 1:
             abilities.remove_ability()
             return phase_constants.MENU
-            pass
         elif menu_input == 2:
-            # TODO ulozenie hry
-            pass
+            save_game(MENU)
         elif menu_input == 3:
             print("Goodbye")
             print(game_constants.DIVIDER)

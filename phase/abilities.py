@@ -1,6 +1,7 @@
 import phase.phase_constants
 from game_constants import DIVIDER
 from phase import hero_data
+import phase.phase_constants
 
 
 abilities = {

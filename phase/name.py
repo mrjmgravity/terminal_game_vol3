@@ -5,6 +5,7 @@ from game_constants import DIVIDER
 def set_nickname():
     while True:
         name_input = input("What is your nickname? ")
+        print(DIVIDER)
         print(f"Is this your nickname? {name_input}")
         print("0 - Change the nickname\n1 - Confirm the nickname")
         name_choice = int(input("Choose one: "))
