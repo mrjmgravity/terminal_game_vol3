@@ -19,7 +19,7 @@ def menu():
         if menu_input == 0:
             continue
         elif menu_input == 1:
-            abilities.remove_ability()
+            hero_abilities.remove_ability()
             return phase_constants.MENU
         elif menu_input == 2:
             save_game(phase_constants.MENU)
