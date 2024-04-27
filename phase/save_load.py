@@ -1,5 +1,6 @@
 from phase import hero_data
 from phase import hero_abilities
+from os import listdir
 
 
 def save_game(next_phase):
@@ -13,9 +14,45 @@ def save_game(next_phase):
             for k, v in hero_abilities.abilities.items():
                 file_handler.write(k + " - " + str(v["points"]) + "\n")
             file_handler.write(next_phase + "\n")
+            file_handler.write(str(hero_data.available_points+"\n"))
             file_handler.close()
             print("Successful saved game")
             break
         else:
             print("Invalid input, try different name")
             continue
+
+
+def load(save):
+    print(f"Loading save {save.replace(".txt", "")}")
+
+    file_handler = open("saved/" + save, "r", encoding="utf-8")
+
+    for file in file_handler:
+        hero_name = file.rstrip()
+
+def load_game():
+    saved_list = []
+    for item in listdir("saved"):
+        saved_list.append(item)
+
+    if len(saved_list) > 0:
+        print("0 - Back")
+        for i, save in enumerate(saved_list):
+            print(str(i + 1) + " - " + save.replace(".txt", ""))
+
+        while True:
+            save_input = input("What do you want to load? ")
+            if save_input == "0":
+                return False, ""
+
+            if not save_input.isdigit() or int(save_input) not in list(range(1, len(saved_list) + 1)):
+                print("Invalid input")
+                continue
+            else:
+                game_to_load = saved_list[int(save_input) - 1]
+                return load(game_to_load)
+
+    else:
+        print("No saved games")
+        return False, ""
