@@ -1,5 +1,7 @@
 from phase import phase_constants
-from phase import save_load
+from phase import hero_data
+from phase.save_load import load_game
+from phase import main_menu
 
 
 def start_game():
@@ -12,7 +14,12 @@ def start_game():
             print("Invalid input")
             continue
 
-        if start_choice == 0:
+        if start_choice == "0":
             return phase_constants.INTRO
         else:
-            save_load.load_game()
+            loaded, next_phase = load_game
+            if loaded:
+                print("Game is loaded, welcome back" + hero_data.hero_name)
+                return main_menu.menu()
+            else:
+                continue

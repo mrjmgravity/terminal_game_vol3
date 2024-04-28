@@ -28,8 +28,33 @@ def load(save):
 
     file_handler = open("saved/" + save, "r", encoding="utf-8")
 
+    name_loaded = False
+    abilities_loaded = False
+    ability_loaded_counter = 0
+    next_phase = ""
+    next_phase_loaded = False
+    available_points_loaded = False
+
     for file in file_handler:
-        hero_name = file.rstrip()
+        file = file.rstrip()
+        if not name_loaded:
+            hero_name = file.rstrip()
+            hero_data.hero_name = hero_name
+            name_loaded = True
+        elif not abilities_loaded:
+            ability_key, points = file.split(" - ")
+            hero_abilities.abilities[ability_key]["points"] = int(points)
+            ability_loaded_counter += 1
+            if ability_loaded_counter == len(hero_abilities.abilities):
+                abilities_loaded = True
+        elif not next_phase_loaded:
+            next_phase = file
+            next_phase_loaded = True
+        elif not available_points_loaded:
+            hero_data.available_points = int(file)
+            available_points_loaded = True
+    return True, next_phase
+
 
 def load_game():
     saved_list = []
