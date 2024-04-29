@@ -14,7 +14,8 @@ def save_game(next_phase):
             for k, v in hero_abilities.abilities.items():
                 file_handler.write(k + " - " + str(v["points"]) + "\n")
             file_handler.write(next_phase + "\n")
-            file_handler.write(str(hero_data.available_points+"\n"))
+            file_handler.write(str(hero_data.available_points))
+            print("\n")
             file_handler.close()
             print("Successful saved game")
             break
