@@ -1,55 +1,55 @@
 enemies = {
     1:
         {
-            "name": "Harpya (LVL 1)",
-            "Útočná sila": 3,
-            "Obrana": 1,
-            "Obratnosť": 2,
+            "name": "Harpy (LVL 1)",
+            "Damage": 3,
+            "Defense": 1,
+            "Dexterity": 2,
             "Skill": 2,
-            "Šťastie": 1,
-            "Život": 25,
+            "Luck": 1,
+            "Health": 25,
         },
 
     2:
         {
             "name": "Golem (LVL 2)",
-            "Útočná sila": 4,
-            "Obrana": 3,
-            "Obratnosť": 1,
+            "Damage": 4,
+            "Defense": 3,
+            "Dexterity": 1,
             "Skill": 2,
-            "Šťastie": 1,
-            "Život": 35,
+            "Luck": 1,
+            "Health": 35,
         },
 
     3:
         {
-            "name": "Mocny demon (LVL 3)",
-            "Útočná sila": 4,
-            "Obrana": 4,
-            "Obratnosť": 2,
+            "name": "Night demon (LVL 3)",
+            "Damage": 4,
+            "Defense": 4,
+            "Dexterity": 2,
             "Skill": 3,
-            "Šťastie": 5,
-            "Život": 50,
+            "Luck": 5,
+            "Health": 50,
         },
 
     4: {
-        "name": "Meduza (LVL 4)",
-        "Útočná sila": 7,
-        "Obrana": 7,
-        "Obratnosť": 5,
+        "name": "Baron Nashor (LVL 4)",
+        "Damage": 7,
+        "Defense": 7,
+        "Dexterity": 5,
         "Skill": 5,
-        "Šťastie": 1,
-        "Život": 40,
+        "Luck": 1,
+        "Health": 40,
         },
 
     5:
         {
-            "name": "KRAKEN - Boh temnoty",
-            "Útočná sila": 7,
-            "Obrana": 7,
-            "Obratnosť": 7,
+            "name": "KRAKEN - God of Darkness",
+            "Damage": 7,
+            "Defense": 7,
+            "Dexterity": 7,
             "Skill": 7,
-            "Šťastie": 7,
-            "Život": 80,
+            "Luck": 7,
+            "Health": 80,
         }
 }
