@@ -34,9 +34,9 @@ def enemy_prepared(monster_level):
     print(f"Health - {hero_health}")
 
 
-def battle():
+def battleground():
     hero_prepared()
     enemy_prepared(1)
 
 
-battle()
+battleground()

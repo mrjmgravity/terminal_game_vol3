@@ -2,6 +2,7 @@ import game_constants
 from phase import hero_abilities
 from phase.save_load import save_game
 from phase import phase_constants
+from fight import battle
 
 
 def menu():
@@ -17,7 +18,7 @@ def menu():
             continue
 
         if menu_input == 0:
-            continue
+            battle.battleground()
         elif menu_input == 1:
             hero_abilities.remove_ability()
             return phase_constants.MENU
