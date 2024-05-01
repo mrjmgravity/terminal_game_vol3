@@ -1,6 +1,6 @@
-mrjaa
-Damage - 2
-Defense - 1
+imaj
+Damage - 1
+Defense - 2
 Dexterity - 1
 Skill - 1
 Health - 50
