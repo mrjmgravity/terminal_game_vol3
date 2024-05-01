@@ -4,7 +4,6 @@ from phase import hero_data
 from phase import save_load
 
 
-
 def start_game():
     while True:
         print("0 - Start new game")
