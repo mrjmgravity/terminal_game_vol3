@@ -19,16 +19,10 @@ def menu():
             continue
 
         if menu_input == 0:
-            if not enemies_abilities.enemies[1]["is_dead"]:
-                battle.battleground(1)
-            elif not enemies_abilities.enemies[2]["is_dead"]:
-                battle.battleground(2)
-            elif not enemies_abilities.enemies[3]["is_dead"]:
-                battle.battleground(3)
-            elif not enemies_abilities.enemies[4]["is_dead"]:
-                battle.battleground(4)
-            elif not enemies_abilities.enemies[5]["is_dead"]:
-                battle.battleground(5)
+            for enemy_number, enemy in enemies_abilities.enemies.items():
+                if not enemy["is_dead"]:
+                    battle.battleground(enemy_number)
+                    break
             else:
                 menu()
 
