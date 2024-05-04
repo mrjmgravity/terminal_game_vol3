@@ -8,7 +8,7 @@ def fighting(is_alive, health_left):
     while True:
         print("You are attacking first\n")
         print(f"You have attacked an enemy with damage {damage_dealt()}")
-
+        print("")
 
 def damage_dealt():
     damage = random.randint(hero_data.min_attack, hero_data.max_attack)
