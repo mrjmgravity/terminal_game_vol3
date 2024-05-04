@@ -3,7 +3,6 @@ from game_constants import DIVIDER
 from phase import hero_data
 
 
-
 abilities = {
     "Damage": {
         "points": 1,

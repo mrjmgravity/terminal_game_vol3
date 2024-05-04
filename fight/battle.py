@@ -1,21 +1,22 @@
 import game_constants
 from phase.hero_abilities import abilities
 from enemies_abilities import enemies
+from phase import hero_data
 
 
 def hero_prepared():
-    min_attack = abilities["Damage"]["points"]
-    max_attack = min_attack + abilities["Dexterity"]["points"] + abilities["Skill"]["points"]
-    min_defense = abilities["Defense"]["points"]
-    max_defense = min_defense + abilities["Dexterity"]["points"]
-    crit_chance = (abilities["Skill"]["points"] + abilities["Luck"]["points"])/2
-    hero_health = abilities["Health"]["points"]
+    hero_data.min_attack = abilities["Damage"]["points"]
+    hero_data.max_attack = hero_data.min_attack + abilities["Dexterity"]["points"] + abilities["Skill"]["points"]
+    hero_data.min_defense = abilities["Defense"]["points"]
+    hero_data.max_defense = hero_data.min_defense + abilities["Dexterity"]["points"]
+    hero_data.crit_chance = (abilities["Skill"]["points"] + abilities["Luck"]["points"])/2
+    hero_data.hero_health = abilities["Health"]["points"]
 
     print("This is how you are prepared")
-    print(f"Damage: minimum - {min_attack}, maximum - {max_attack}")
-    print(f"Your critical change is {crit_chance}%")
-    print(f"Defense: minimum - {min_defense}, maximum - {max_defense}")
-    print(f"Health - {hero_health}")
+    print(f"Damage: minimum - { hero_data.min_attack}, maximum - {hero_data.max_attack}")
+    print(f"Your critical change is {hero_data.crit_chance}%")
+    print(f"Defense: minimum - {hero_data.min_defense}, maximum - {hero_data.max_defense}")
+    print(f"Health - {hero_data.hero_health}")
     print("\n")
 
 
