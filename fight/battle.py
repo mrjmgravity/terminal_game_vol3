@@ -1,3 +1,4 @@
+import game_constants
 from phase.hero_abilities import abilities
 from enemies_abilities import enemies
 
@@ -32,6 +33,7 @@ def enemy_prepared(monster_level):
     print(f"{enemy_name.replace("(LVL 1)", "")} critical change is {crit_chance}%")
     print(f"Defense: minimum - {min_defense}, maximum - {max_defense}")
     print(f"Health - {hero_health}")
+    print(game_constants.DIVIDER)
 
 
 def battleground(monster_level):

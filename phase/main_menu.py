@@ -1,3 +1,4 @@
+import enemies_abilities
 import game_constants
 from phase import hero_abilities
 from phase.save_load import save_game
@@ -18,8 +19,19 @@ def menu():
             continue
 
         if menu_input == 0:
-            battle.battleground(1)
-            break
+            if not enemies_abilities.enemies[1]["is_dead"]:
+                battle.battleground(1)
+            elif not enemies_abilities.enemies[2]["is_dead"]:
+                battle.battleground(2)
+            elif not enemies_abilities.enemies[3]["is_dead"]:
+                battle.battleground(3)
+            elif not enemies_abilities.enemies[4]["is_dead"]:
+                battle.battleground(4)
+            elif not enemies_abilities.enemies[5]["is_dead"]:
+                battle.battleground(5)
+            else:
+                menu()
+
         elif menu_input == 1:
             hero_abilities.remove_ability()
             return phase_constants.MENU

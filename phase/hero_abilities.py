@@ -34,7 +34,7 @@ abilities = {
 
 def print_abilities():
     while True:
-        print("This is your abilities, if you want to see description type 0 : ")
+        print("These are your abilities, if you want to see description type 0 : ")
         for ability, details in abilities.items():
             print(f" {ability}: {details['points']} points", end=", ")
         break
@@ -54,7 +54,7 @@ def abilities_assign():
     while hero_data.available_points != 0:
         print(f"You have {hero_data.available_points} points to assign")
         print_abilities()
-        assign_input = int(input("What you want upgrade? "))
+        assign_input = int(input("What do you want to upgrade? "))
 
         if assign_input not in [0, 1, 2, 3, 4, 5, 6]:
             print("Invalid input")
