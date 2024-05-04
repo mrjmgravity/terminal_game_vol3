@@ -14,7 +14,7 @@ def hero_prepared():
     hero_data.hero_health = abilities["Health"]["points"]
 
     print("This is how you are prepared")
-    print(f"Damage: minimum - { hero_data.min_attack}, maximum - {hero_data.max_attack}")
+    print(f"Damage: minimum - {hero_data.min_attack}, maximum - {hero_data.max_attack}")
     print(f"Your critical change is {hero_data.crit_chance}%")
     print(f"Defense: minimum - {hero_data.min_defense}, maximum - {hero_data.max_defense}")
     print(f"Health - {hero_data.hero_health}")
@@ -41,4 +41,3 @@ def enemy_prepared(monster_level):
 def battleground(monster_level):
     hero_prepared()
     enemy_prepared(monster_level)
-
