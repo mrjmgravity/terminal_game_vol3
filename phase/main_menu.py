@@ -4,6 +4,7 @@ from phase import hero_abilities
 from phase.save_load import save_game
 from phase import phase_constants
 from fight import battle
+from fight import fight
 
 
 def menu():
@@ -22,6 +23,7 @@ def menu():
             for enemy_number, enemy in enemies_abilities.enemies.items():
                 if not enemy["is_dead"]:
                     battle.battleground(enemy_number)
+                    fight.fighting()
                     break
             else:
                 menu()
