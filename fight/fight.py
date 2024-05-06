@@ -6,16 +6,21 @@ import random
 import check_monster_level
 
 
-def fighting(is_alive):
-    enemy_health_left = int(enemy_data.hero_health) - enemy_damage_received()
-    hero_health_left = int(hero_data.hero_health) - hero_received()
-    while hero_health_left or enemy_health_left == 0:
+def fighting():
+    monster_level = check_monster_level.update_monster_level()
+    is_alive = enemies_abilities.enemies[monster_level]["is_dead"]
+    hero_health_left = int(hero_data.hero_health)
+    enemy_health_left = int(enemy_data.hero_health)
+
+    while hero_health_left > 0 and enemy_health_left > 0:
         print("You are attacking first\n")
 
         if not is_alive:
+            enemy_health_left -= enemy_damage_received()
             print(f"You have attacked an enemy with damage {hero_dealt_damage()}")
             print(f"{enemy_data.enemy_name} has {enemy_health_left} left \n")
             print(f"{enemy_data.enemy_name} is attacking with {enemy_dealt_damage()}")
+            hero_health_left -= hero_received()
             print(f"You have {hero_health_left} left")
         else:
             is_alive = True
@@ -53,4 +58,4 @@ def hero_dealt_damage():
         return damage
 
 
-fighting(False)
+fighting()
