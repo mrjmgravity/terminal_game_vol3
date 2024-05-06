@@ -3,6 +3,7 @@ import enemy_data
 import phase.hero_abilities
 from phase import hero_data
 import random
+import check_monster_level
 
 
 def fighting(is_alive):
@@ -29,9 +30,11 @@ def hero_received():
 def enemy_dealt_damage():
     enemy_dmg = random.randint(enemy_data.min_attack, enemy_data.max_attack)
     crit_chance = random.randint(0, 99)
-    crit = enemies_abilities.enemies["Luck"]["points"]
+    crit = enemies_abilities.enemies[check_monster_level.update_monster_level()]["Luck"]
     if crit_chance <= crit:
         return enemy_dmg * 3
+    else:
+        return enemy_dmg
 
 
 def enemy_damage_received():
@@ -50,4 +53,4 @@ def hero_dealt_damage():
         return damage
 
 
-fighting(True)
+fighting(False)
