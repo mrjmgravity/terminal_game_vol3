@@ -13,6 +13,7 @@ def menu():
         print("2 - Save the game")
         print("3 - Quit the game")
         menu_input = int(input("What is your choice? "))
+        print(game_constants.DIVIDER)
 
         if menu_input not in [0, 1, 2, 3]:
             print("Invalid input")
