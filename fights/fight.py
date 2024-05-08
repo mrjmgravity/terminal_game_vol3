@@ -1,9 +1,10 @@
 import enemies_abilities
 import enemy_data
+import game_constants
 import phase.hero_abilities
 from phase import hero_data
 import random
-import check_monster_level
+from fights import check_monster_level
 
 
 def fighting():
@@ -12,8 +13,8 @@ def fighting():
     hero_health_left = int(hero_data.hero_health)
     enemy_health_left = int(enemy_data.hero_health)
 
+    print("You are attacking first\n")
     while hero_health_left > 0 and enemy_health_left > 0:
-        print("You are attacking first\n")
 
         if not is_alive:
             enemy_health_left -= enemy_damage_received()
@@ -22,6 +23,7 @@ def fighting():
             print(f"{enemy_data.enemy_name} is attacking with {enemy_dealt_damage()}")
             hero_health_left -= hero_received()
             print(f"You have {hero_health_left} left")
+            print(game_constants.DIVIDER)
         else:
             is_alive = True
 
@@ -50,8 +52,9 @@ def enemy_damage_received():
 
 def hero_dealt_damage():
     damage = random.randint(hero_data.min_attack, hero_data.max_attack)
-    crit_chance = random.randint(0, 99)
+    crit_chance = random.randint(0, 100)
     crit = phase.hero_abilities.abilities["Luck"]["points"]
+
     if crit_chance <= crit:
         return damage * 3
     else:

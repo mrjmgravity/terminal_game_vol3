@@ -22,7 +22,7 @@ abilities = {
     },
     "Health": {
         "points": 50,
-        "description": "Health can be restored after every fight."
+        "description": "Health can be restored after every fights."
     },
     "Luck": {
         "points": 1,
