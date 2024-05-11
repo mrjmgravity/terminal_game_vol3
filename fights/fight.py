@@ -22,15 +22,19 @@ def fighting():
             print(f"{enemy_data.enemy_name} has {enemy_health_left} health left.\n")
             if enemy_health_left <= 0:
                 print("Enemy defeated!")
+                print(game_constants.DIVIDER)
                 break
             print(f"{enemy_data.enemy_name} is attacking with {enemy_dealt_damage()} damage.")
             hero_health_left -= enemy_dealt_damage()
             print(f"You have {hero_health_left} health left.\n")
             if hero_health_left <= 0:
                 print("You have been defeated!")
+                print(game_constants.DIVIDER)
                 break
         else:
             print("The enemy is already defeated!")
+            print(game_constants.DIVIDER)
+
             break
         print(game_constants.DIVIDER)
 
