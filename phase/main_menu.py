@@ -13,14 +13,14 @@ def menu():
         print("1 - Edit points")
         print("2 - Save the game")
         print("3 - Quit the game")
-        menu_input = int(input("What is your choice? "))
+        menu_input = input("What is your choice? ")
         print(game_constants.DIVIDER)
 
-        if menu_input not in [0, 1, 2, 3]:
+        if menu_input not in ["0", "1", "2", "3"]:
             print("Invalid input")
             continue
 
-        if menu_input == 0:
+        if menu_input == "0":
             for enemy_number, enemy in enemies_abilities.enemies.items():
                 if not enemy["is_dead"]:
                     battle.battleground(enemy_number)
@@ -29,12 +29,12 @@ def menu():
             else:
                 menu()
 
-        elif menu_input == 1:
+        elif menu_input == "1":
             hero_abilities.remove_ability()
             return phase_constants.MENU
-        elif menu_input == 2:
+        elif menu_input == "2":
             save_game(phase_constants.MENU)
-        elif menu_input == 3:
+        elif menu_input == "3":
             print("Goodbye")
             print(game_constants.DIVIDER)
             return phase_constants.END
