@@ -1,10 +1,9 @@
-import enemy_data
-import fights.fight
+import fights.battle
 import game_constants
+import phase.phase_constants
 from phase import hero_abilities
 from phase.save_load import save_game
 from phase import phase_constants
-from fights import battle
 
 
 def menu():
@@ -21,13 +20,8 @@ def menu():
             continue
 
         if menu_input == "0":
-            if not enemy_data.is_dead:
-                battle.battleground(enemy_data.monster_level)
-                fights.fight.fighting()
-                break
-            else:
-                menu()
-
+            fights.battle.battleground()
+            return phase.phase_constants.FIGHT
         elif menu_input == "1":
             hero_abilities.remove_ability()
             return phase_constants.MENU

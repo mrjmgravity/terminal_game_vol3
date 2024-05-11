@@ -13,7 +13,7 @@ def hero_prepared():
     print("\n")
 
 
-def enemy_prepared(monster_level):
+def enemy_prepared():
     print(f"This is your enemy {enemy_data.enemy_name}")
     print(f"Damage: minimum - {enemy_data.min_attack}, maximum - {enemy_data.max_attack}")
     print(f"{enemy_data.enemy_name.replace("(LVL 1)", "")} critical chance is {enemy_data.crit_chance}%")
@@ -22,6 +22,6 @@ def enemy_prepared(monster_level):
     print(game_constants.DIVIDER)
 
 
-def battleground(monster_level):
+def battleground():
     hero_prepared()
-    enemy_prepared(monster_level)
+    enemy_prepared()

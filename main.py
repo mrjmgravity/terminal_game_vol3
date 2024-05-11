@@ -4,6 +4,7 @@ from phase.name import set_nickname
 from phase import hero_abilities
 from phase import phase_constants
 from phase.start import start_game
+from fights import fight
 
 
 current_phase = phase_constants.START
@@ -21,3 +22,5 @@ while True:
         current_phase = main_menu.menu()
     elif current_phase == phase_constants.ABILITIES:
         current_phase = hero_abilities.abilities_assign()
+    elif current_phase == phase_constants.FIGHT:
+        current_phase = fight.fighting()

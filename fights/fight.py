@@ -6,16 +6,16 @@ import random
 from fights import check_monster_level
 
 
+
 def fighting():
     monster_level = check_monster_level.update_monster_level()
-    is_alive = not enemies_abilities.enemies[monster_level]["is_dead"]
     hero_health_left = int(hero_data.hero_health)
     enemy_health_left = int(enemy_data.enemy_health)
 
     print("You are attacking first\n")
-    while hero_health_left > 0 and enemy_health_left > 0:  # Changed `or` to `and`
+    while hero_health_left > 0 and enemy_health_left > 0:
 
-        if is_alive:
+        if not monster_level:
             print(f"You have attacked {enemy_data.enemy_name} with damage {hero_dealt_damage()}")
             enemy_health_left -= hero_dealt_damage()
             print(f"{enemy_data.enemy_name} has {enemy_health_left} health left.\n")
@@ -41,7 +41,7 @@ def fighting():
 
 def hero_received():
     defense = random.randint(hero_data.min_defense, hero_data.max_defense)
-    received_damage = max(enemy_dealt_damage() - defense, 0)  # Ensure non-negative damage
+    received_damage = max(enemy_dealt_damage() - defense, 0)
     return received_damage
 
 
