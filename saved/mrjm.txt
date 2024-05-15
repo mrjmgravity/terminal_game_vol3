@@ -1,9 +1,9 @@
 mrjm
-Damage - 1
-Defense - 0
+Damage - 5
+Defense - 2
 Dexterity - 1
 Skill - 1
 Health - 50
-Luck - 1
+Luck - 3
 MENU
 0

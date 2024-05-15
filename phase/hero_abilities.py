@@ -49,29 +49,28 @@ def print_ability_description():
 
 
 def abilities_assign():
-    hero_data.available_points = 1
     while hero_data.available_points != 0:
         print(f"You have {hero_data.available_points} points to assign")
         print_abilities()
-        assign_input = int(input("What do you want to upgrade? "))
+        assign_input = int(input("\nWhat do you want to upgrade? "))
 
-        if assign_input not in [0, 1, 2, 3, 4, 5, 6]:
+        if assign_input not in ["0", "1", "2", "3", '4', '5', '6']:
             print("Invalid input")
             print(DIVIDER)
             continue
 
-        if assign_input == 0:
+        if assign_input == "0":
             print_ability_description()
             return abilities_assign()
-        elif assign_input == 1:
+        elif assign_input == "1":
             abilities["Damage"]["points"] += 1
-        elif assign_input == 2:
+        elif assign_input == "2":
             abilities["Defense"]["points"] += 1
-        elif assign_input == 3:
+        elif assign_input == "3":
             abilities["Dexterity"]["points"] += 1
-        elif assign_input == 4:
+        elif assign_input == '4':
             abilities["Skill"]["points"] += 1
-        elif assign_input == 5:
+        elif assign_input == '5':
             abilities["Health"]["points"] += 5
         else:
             abilities["Luck"]["points"] += 1
@@ -84,7 +83,6 @@ def abilities_assign():
 
 
 def remove_ability():
-    hero_data.available_points = 0
     while True:
         print_abilities()
         remove_input = input("\nWhich ability you want to remove? ")

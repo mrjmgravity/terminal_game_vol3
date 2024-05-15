@@ -4,6 +4,7 @@ import game_constants
 from phase import hero_data
 import random
 from fights import check_monster_level
+from fights import after_fight
 
 
 def fighting():
@@ -21,6 +22,7 @@ def fighting():
             if enemy_health_left <= 0:
                 print("Enemy defeated!")
                 print(game_constants.DIVIDER)
+                after_fight.after_battle()
                 break
             print(f"{enemy_data.enemy_name} is attacking with {enemy_dealt_damage()} damage.")
             hero_health_left -= enemy_dealt_damage()
@@ -56,16 +58,15 @@ def enemy_dealt_damage():
 
 def enemy_damage_received():
     defense = random.randint(enemy_data.min_defense, enemy_data.max_defense)
-    received_damage = max(hero_dealt_damage() - defense, 0)  # Ensure non-negative damage
+    received_damage = max(hero_dealt_damage() - defense, 0)
     return received_damage
 
 
 def hero_dealt_damage():
     damage = random.randint(hero_data.min_attack, hero_data.max_attack)
+    crit_dmg = damage * 3
     crit_chance = random.randint(0, 100)
-    crit = hero_data.crit_chance
-
-    if crit_chance <= crit:
-        return damage * 3
+    if crit_chance <= hero_data.crit_chance:
+        return crit_dmg
     else:
         return damage

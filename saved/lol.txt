@@ -1,8 +1,0 @@
-mrjm
-Damage - 2
-Defense - 1
-Dexterity - 1
-Skill - 1
-Health - 50
-Luck - 1
-MENU
