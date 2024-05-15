@@ -20,7 +20,6 @@ def menu():
             continue
 
         if menu_input == "0":
-            fights.battle.battleground()
             return phase.phase_constants.FIGHT
         elif menu_input == "1":
             hero_abilities.remove_ability()

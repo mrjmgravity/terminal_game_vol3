@@ -3,7 +3,6 @@ from phase import hero_abilities
 available_points = 7
 hero_name = ""
 
-
 min_attack = hero_abilities.abilities["Damage"]["points"]
 max_attack = (hero_abilities.abilities["Damage"]["points"] + hero_abilities.abilities["Dexterity"]["points"] +
               hero_abilities.abilities["Skill"]["points"])

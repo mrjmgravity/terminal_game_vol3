@@ -20,8 +20,3 @@ def enemy_prepared():
     print(f"Defense: minimum - {enemy_data.min_defense}, maximum - {enemy_data.max_defense}")
     print(f"Health - {enemy_data.enemy_health}")
     print(game_constants.DIVIDER)
-
-
-def battleground():
-    hero_prepared()
-    enemy_prepared()

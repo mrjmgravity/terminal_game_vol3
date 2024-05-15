@@ -5,12 +5,16 @@ from phase import hero_data
 import random
 from fights import check_monster_level
 from fights import after_fight
+from fights import battle
 
 
 def fighting():
     monster_level = check_monster_level.update_monster_level()
     hero_health_left = hero_data.hero_health
     enemy_health_left = enemy_data.enemy_health
+
+    battle.hero_prepared()
+    battle.enemy_prepared()
 
     print("You are attacking first\n")
     while hero_health_left >= 0 or enemy_health_left >= 0:
@@ -64,9 +68,8 @@ def enemy_damage_received():
 
 def hero_dealt_damage():
     damage = random.randint(hero_data.min_attack, hero_data.max_attack)
-    crit_dmg = damage * 3
     crit_chance = random.randint(0, 100)
     if crit_chance <= hero_data.crit_chance:
-        return crit_dmg
+        return damage * 3
     else:
         return damage
