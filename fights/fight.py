@@ -35,7 +35,7 @@ def fighting():
                 print(game_constants.DIVIDER)
                 print("You have been defeated!")
                 print(game_constants.DIVIDER)
-                break
+
         else:
             print("The enemy is already defeated!")
             print(game_constants.DIVIDER)
