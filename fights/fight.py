@@ -1,6 +1,7 @@
 import enemies_abilities
 import enemy_data
 import game_constants
+import phase.start
 from phase import hero_data
 import random
 from fights import check_monster_level
@@ -35,7 +36,7 @@ def fighting():
                 print(game_constants.DIVIDER)
                 print("You have been defeated!")
                 print(game_constants.DIVIDER)
-
+                phase.start.start_game()
         else:
             print("The enemy is already defeated!")
             print(game_constants.DIVIDER)
