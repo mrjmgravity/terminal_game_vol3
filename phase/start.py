@@ -27,4 +27,3 @@ def start_game():
             else:
                 print(game_constants.DIVIDER)
                 continue
-
