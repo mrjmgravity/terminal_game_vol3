@@ -1,6 +1,10 @@
 import game_constants
 from phase import hero_data
 import enemy_data
+import enemies_abilities
+
+def battle(fight_level):
+    enemy_data = enemies_abilities.enemies[fight_level]
 
 
 def hero_prepared():
