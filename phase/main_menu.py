@@ -1,4 +1,3 @@
-import fights.battle
 import game_constants
 import phase.phase_constants
 from phase import hero_abilities

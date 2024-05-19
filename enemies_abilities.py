@@ -2,7 +2,6 @@
 enemies = {
     1:
         {
-            "is_dead": False,
             "name": "Harpy (LVL 1)",
             "Damage": 3,
             "Defense": 1,
@@ -14,7 +13,6 @@ enemies = {
 
     2:
         {
-            "is_dead": False,
             "name": "Golem (LVL 2)",
             "Damage": 4,
             "Defense": 3,
@@ -26,7 +24,6 @@ enemies = {
 
     3:
         {
-            "is_dead": False,
             "name": "Night demon (LVL 3)",
             "Damage": 4,
             "Defense": 4,
@@ -37,7 +34,6 @@ enemies = {
         },
 
     4: {
-        "is_dead": False,
         "name": "Baron Nashor (LVL 4)",
         "Damage": 7,
         "Defense": 7,
@@ -49,7 +45,6 @@ enemies = {
 
     5:
         {
-            "is_dead": False,
             "name": "KRAKEN - God of Darkness",
             "Damage": 7,
             "Defense": 7,
